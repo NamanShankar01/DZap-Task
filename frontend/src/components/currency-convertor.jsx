@@ -76,13 +76,14 @@ const CurrencyConverter = () => {
 
   }
   return (
-    <div className="max-w-xl mx-auto my-10 p-5 bg-white rounded-lg shadow-md">
-      <h2 className="mb-5 text-2xl font-semibold text-gray-700">
-        Currency Converter
+    <div className="max-w-2xl mx-auto my-10 p-6 px-10 bg-black bg-opacity-60 rounded-2xl shadow-md">
+      <h2 className="mb-5 text-2xl font-semibold text-white ">
+        DZap Converter
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end ">
         <CurrencyDropdown
+          className="text-white"
           favorites={favorites}
           currencies={currencies}
           title="From:"
@@ -94,7 +95,7 @@ const CurrencyConverter = () => {
         <div className="flex justify-center -mb-5 sm:mb-0">
           <button
             onClick={swapCurrencies}
-            className="p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300"
+            className="p-2 bg-white rounded-full cursor-pointer hover:bg-green-300"
           >
             <HiArrowsRightLeft className="text-xl text-gray-700" />
           </button>
@@ -112,7 +113,7 @@ const CurrencyConverter = () => {
       <div className="mt-4">
         <label
           htmlFor="amount"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-white"
         >
           Amount:
         </label>
@@ -127,7 +128,7 @@ const CurrencyConverter = () => {
       <div className="flex justify-end mt-6">
         <button
           onClick={convertCurrency}
-          className={`px-5 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+          className={`px-5 py-2 bg-violet-600 text-white rounded-md hover:bg-green-300 hover:text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
           ${converting ? "animate-pulse" : ""}`}
         >
           Convert
@@ -135,7 +136,7 @@ const CurrencyConverter = () => {
       </div>
 
       {convertedAmount && (
-        <div className="mt-4 text-lg font-medium text-right text-green-600">
+        <div className="mt-4 text-lg font-medium text-right text-white">
           Converted Amount: {convertedAmount}
         </div>
       )}

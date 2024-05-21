@@ -15,7 +15,7 @@ const CurrencyDropdown = ({
     <div className="hello">
       <label
         htmlFor={title}
-        className="block text-sm font-medium text-gray-700"
+        className="block text-sm font-medium text-white"
       >
         {title}
       </label>
@@ -28,7 +28,7 @@ const CurrencyDropdown = ({
         >
           {favorites.map((currency) => {
             return (
-              <option className="bg-gray-200" value={currency} key={currency}>
+              <option className="bg-green-200" value={currency} key={currency}>
                 {currency}
               </option>
             );
@@ -47,7 +47,7 @@ const CurrencyDropdown = ({
 
         <button
           onClick={() => handleFavorite(currency)}
-          className="absolute inset-y-0 right-0 pr-5 flex items-center text-sm leading-5"
+          className="absolute inset-y-0 right-1 pr-5 flex items-center text-sm leading-5"
         >
           {isFavorite(currency) ? <HiStar /> : <HiOutlineStar />}
         </button>
